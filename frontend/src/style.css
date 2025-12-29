@@ -1,0 +1,126 @@
+:root {
+  font-family: 'Nunito', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  color: var(--text-primary);
+  background: var(--app-gradient);
+  transition: background 0.4s ease;
+}
+
+:root[data-theme='light'] {
+  --app-gradient: radial-gradient(circle at top, #fdf2ff, #d0e4ff 45%, #f8fbff 100%);
+  --card-bg: rgba(255, 255, 255, 0.85);
+  --card-border: rgba(255, 255, 255, 0.65);
+  --card-shadow: 0 25px 60px rgba(96, 122, 255, 0.15);
+  --text-primary: #0f172a;
+  --text-secondary: rgba(15, 23, 42, 0.7);
+  --text-tertiary: rgba(15, 23, 42, 0.5);
+  --el-bg-color: #ffffff;
+  --el-bg-color-overlay: #ffffff;
+  --el-text-color-primary: #0f172a;
+  --el-text-color-regular: #1f2937;
+  --el-border-color: #e5e7eb;
+  --el-border-color-light: #e5e7eb;
+  --el-fill-color-blank: #ffffff;
+  --el-fill-color-light: #f8fafc;
+  --el-color-primary: #3b82f6;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --app-gradient: radial-gradient(circle at top, #141824, #0c1220 55%, #0b1325 100%);
+  --card-bg: rgba(23, 31, 46, 0.9);
+  --card-border: rgba(255, 255, 255, 0.08);
+  --card-shadow: 0 24px 40px rgba(0, 0, 0, 0.55);
+  --text-primary: #e5edff;
+  --text-secondary: rgba(229, 237, 255, 0.82);
+  --text-tertiary: rgba(229, 237, 255, 0.6);
+  --el-bg-color: #0f172a;
+  --el-bg-color-overlay: #111827;
+  --el-text-color-primary: #e5edff;
+  --el-text-color-regular: #cbd5e1;
+  --el-border-color: #334155;
+  --el-border-color-light: #475569;
+  --el-fill-color-blank: #0f172a;
+  --el-fill-color-light: #1e293b;
+  --el-color-primary: #7cb3ff;
+  --el-color-primary-light-3: #9bc8ff;
+  --el-color-primary-light-5: #b8d8ff;
+  --el-color-primary-light-7: #d6e9ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--app-gradient);
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+#app {
+  min-height: 100vh;
+}
+
+.glass-card {
+  background: var(--card-bg);
+  border-radius: 24px;
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--card-border);
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+  color: var(--text-primary);
+}
+
+.el-input__wrapper,
+.el-textarea__inner,
+.el-select .el-input__wrapper,
+.el-date-editor.el-input,
+.el-date-editor .el-input__wrapper {
+  background-color: var(--el-fill-color-light) !important;
+  border-color: var(--el-border-color) !important;
+  color: var(--text-primary) !important;
+}
+
+.el-input__inner,
+.el-select__selected-item,
+.el-date-editor .el-input__inner,
+.el-textarea__inner {
+  color: var(--text-primary) !important;
+}
+
+.el-select__caret {
+  color: var(--text-secondary) !important;
+}
+
+.el-button--primary.is-plain {
+  color: var(--el-color-primary) !important;
+  border-color: var(--el-color-primary) !important;
+  background-color: transparent !important;
+}
+
+.el-card {
+  background: var(--card-bg) !important;
+  border-color: var(--card-border) !important;
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.el-card__header {
+  border-bottom: none;
+}
+
+.el-drawer__body {
+  padding: 0 24px 24px;
+}
+
+.el-message-box__title {
+  font-weight: 600;
+}
