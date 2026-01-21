@@ -1,4 +1,4 @@
-# Todo List 全栈应用
+# Todo List 全栈应用哦
 
 一个基于 **Spring Boot 3 + MySQL 8 + Vue 3 + Element Plus** 的现代化待办应用，支持暗/亮主题、任务筛选排序、完善的 REST API 以及一键运行脚本。
 
